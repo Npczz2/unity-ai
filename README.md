@@ -10,10 +10,50 @@ The enemy default state is the **patrol state.** On this mode, he has to reach t
   
 ![Patrol](https://github.com/Npczz2/unity-ai/blob/main/GIFs/Patrol%20Gif.gif)
 
+```
+void Patrol()
+{
+    //When the enemy arrives at the target position, set the next position on the list as a target
+    if (Vector3.Distance(transform.position, targetPos) <= 1f) 
+    {
+          if (curPatrolPos < patrolPositions.Count - 1)
+          {
+              curPatrolPos++;
+          }
+          else
+          {
+              curPatrolPos = 0;
+          }
+
+          targetPos = patrolPositions[curPatrolPos];
+    }
+
+    agent.destination = targetPos; 
+}
+```
+
 ## Soft Search State
 The player can throw a tuna can on the floor to get the guards attention. If any enemy is on the specified range when the object makes the sound, he enters in a **soft search state.** In this mode, he walks to the object, stop, and look around searching for any suspicious activity. If he doesn't find any, he goes back to the *patrol state.*  
   
 ![SoftSearch](https://github.com/Npczz2/unity-ai/blob/main/GIFs/Soft%20Search%20Gif.gif)
+
+```
+void OnCollisionEnter(Collision col)
+{
+    if (col.gameObject.tag == "Floor")
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (Vector3.Distance(transform.position, enemies[i].transform.position) <= 15f) //Check for any enemies near than 15 units of distance
+            {
+                enemies[i].GetComponent<Enemy>().StartSoftSearch(transform.position);
+            }
+        }
+    }
+}
+```
 
 ## Chase State
 In the chase state, the enemy **destination** is set to the player current position. There are two situations that can trigger the **chase state:**
