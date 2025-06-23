@@ -22,6 +22,18 @@ In the chase state, the enemy **destination** is set to the player current posit
   
 ![ChaseState](https://github.com/Npczz2/unity-ai/blob/main/GIFs/Chase%20Gif.gif)
 
+```
+RaycastHit hit;
+
+if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 15f))
+{
+    if (hit.collider.gameObject.tag == "Player")
+    {
+        curState = States.chase;
+    }
+}
+```
+
 ## Hard Search State
 If the player is out of enemy sight, the guards start enter in the **hard search state.** When chasing, the enemies store the *last player known position* every 0.2 seconds. With this information, he can go to that last position when he enters this new state. When the enemy reaches the last player known position, he starts to look around and walk near the spot trying to find the player.  
 When a guard enters this state, he also warn other guards near him about the situation, making them enter on a hard search state too.  
