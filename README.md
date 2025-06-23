@@ -20,7 +20,7 @@ In the chase state, the enemy **destination** is set to the player current posit
 //GIF DO INIMIGO EM CHASE STATE
 
 ## Hard Search State
-If the player is out of enemy sight, the guards start enter in the **hard search state.** When chasing, the enemies store the *last player known position* every 0.2 seconds. With this information, he can go to that last position when he enters this new state. When the enemy reaches the last player known position, he starts to look around and walk near the spot trying to find the player.
+If the player is out of enemy sight, the guards start enter in the **hard search state.** When chasing, the enemies store the *last player known position* every 0.2 seconds. With this information, he can go to that last position when he enters this new state. When the enemy reaches the last player known position, he starts to look around and walk near the spot trying to find the player.  
 When a guard enters this state, he also warn other guards near him about the situation, making them enter on a hard search state too.
 //GIF DO INIMIGO EM HSS
 
