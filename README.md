@@ -7,6 +7,7 @@ Here are all the enemy behaviours implemented on the game.
 
 ## Patrol State
 The enemy default state is the **patrol state.** On this mode, he has to reach the current point declared on an array of **Vector3 positions.** The guard keep repeating the path until something changes his state.  
+  
 ![Patrol](https://github.com/Npczz2/unity-ai/blob/main/GIFs/Patrol%20Gif.gif)
 
 ## Soft Search State
