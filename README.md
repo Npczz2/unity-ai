@@ -46,7 +46,8 @@ void OnCollisionEnter(Collision col)
 
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (Vector3.Distance(transform.position, enemies[i].transform.position) <= 15f) //Check for any enemies near than 15 units of distance
+            //Check for any enemies near than 15 units of distance
+            if (Vector3.Distance(transform.position, enemies[i].transform.position) <= 15f)
             {
                 enemies[i].GetComponent<Enemy>().StartSoftSearch(transform.position);
             }
