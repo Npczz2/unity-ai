@@ -1,5 +1,5 @@
 # Unity NPC AI
-This is a short project created on Unity focused on a smart enemy AI. It was made for a college assignment on a few days using **C# language**.
+This is a short project created on Unity focused on a smart enemy AI. It was made for a college assignment in a few days using **C# language**.
 The enemies also use **Unity NavMesh** to create walking paths thru the map.
 
 # Enemy behaviour
