@@ -25,4 +25,4 @@ When a guard enters this state, he also warn other guards near him about the sit
 //GIF DO INIMIGO EM HSS
 
 # Prototype
-This game prototype can be played on browser in itch.io: https://npcproductions.itch.io/sck981-demo
+This game prototype can be played in browser: https://npcproductions.itch.io/sck981-demo
