@@ -14,9 +14,9 @@ The player can throw a tuna can on the floor to get the guards attention. If any
 //GIF DO INIMIGO EM SOFT SEARCH
 
 ## Chase State
-There are two situations that can trigger the **chase state:**\n
-1 - The player is **seen by the guard.** This detection is made using Unity **Raycast.** With the raycast, the enemy keeps checking for collisions in front of him on a specified range.\n
-2 - The player is **heard by the guard.** This happens when the player walks near to the enemy. Inside the guard script there is a specified distance that is considered for this to happen.\n
+There are two situations that can trigger the **chase state:**
+- The player is **seen by the guard.** This detection is made using Unity **Raycast.** With the raycast, the enemy keeps checking for collisions in front of him on a specified range.
+- The player is **heard by the guard.** This happens when the player walks near to the enemy. Inside the guard script there is a specified distance that is considered for this to happen.
 In the chase state, the enemy **destination** is set to the player current position.
 //GIF DO INIMIGO EM CHASE STATE
 
