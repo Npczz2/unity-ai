@@ -33,7 +33,7 @@ void Patrol()
 ```
 
 ## Soft Search State
-The player can throw a tuna can on the floor to get the guards attention. If any enemy is on the specified range when the object makes the sound, he enters in a **soft search state.** In this mode, he walks to the object, stop, and look around searching for any suspicious activity. If he doesn't find any, he goes back to the *patrol state.*  
+The player can throw a *tuna can* on the floor to get the guards attention. If any enemy is on the specified range when the object makes the sound, he enters in a **soft search state.** In this mode, he walks to the object, stop, and look around searching for any suspicious activity. If he doesn't find any, he goes back to the *patrol state.*  
   
 ![SoftSearch](https://github.com/Npczz2/unity-ai/blob/main/GIFs/Soft%20Search%20Gif.gif)
 
